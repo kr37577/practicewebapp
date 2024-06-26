@@ -1,26 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-const Header = () => {
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Layout, Menu } from 'antd';
+import '../App.css';
+
+const { Header } = Layout;
+
+function AppHeader() {
   return (
-    <header>
-        <div className="logo">
-            <h3>ポートフォリオ</h3>
-        </div>
-         <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to = "/SNS">SNS</Link>
-            </li>
-            {/* <li>
-              <Link to = "/Blog">Blog</Link>
-            </li> */}
-          </ul>
-         </nav>
-    </header>
-  )
+    <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+      <div className="logo">
+        <h3 style={{ color: 'white' }}>My Website</h3>
+      </div>
+      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
+        <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
+        <Menu.Item key="2"><Link to="/blog">Blog</Link></Menu.Item>
+        <Menu.Item key="3"><Link to="/sns">SNS</Link></Menu.Item>
+      </Menu>
+    </Header>
+  );
 }
 
-export default Header
+export default AppHeader;

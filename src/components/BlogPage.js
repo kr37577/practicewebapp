@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Typography } from 'antd';
 
-const BlogPage = () => {
+const { Title, Paragraph } = Typography;
+
+function BlogPage() {
   return (
-    <div>BlogPage</div>
-  )
+    <div>
+      <Title>Blog Page</Title>
+      <Paragraph>Here you can read our latest blog posts.</Paragraph>
+    </div>
+  );
 }
 
-export default BlogPage
+export default BlogPage;

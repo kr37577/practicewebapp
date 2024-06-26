@@ -1,13 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Typography } from 'antd';
 
-const SNSPage = () => {
+const { Title, Paragraph } = Typography;
+
+function SNSPage() {
   return (
-    <div className='container'>
-        <h1>SNS一覧</h1>
-        <a href='https://github.com/kr37577'><h3>github</h3></a>
-
+    <div>
+      <Title>SNS Page</Title>
+      <Paragraph></Paragraph>
     </div>
-  )
+  );
 }
 
-export default SNSPage
+export default SNSPage;

@@ -1,110 +1,74 @@
+/* 定義された色変数 */
 :root {
+  --primary-color: #1890ff;
+  --secondary-color: #f5222d;
   --black-color: #010000;
   --white-color: #ffffff;
   --lightgray-color: #e6e6e6;
+  
 }
 
+/* アプリ全体のスタイル */
 .App {
   font-size: 18px;
-  height: 100vh;
-  width: 100%;
-  /* font-weight: 400; */
-  /* font-style: normal; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* ヘッダースタイル */
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  background: black;
+  background: var(--primary-color);
   color: white;
-  height: 90px;
+  padding: 0 20px;
+  height: 64px;
   position: fixed;
-  z-index: 10;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.3s ease;
 }
+
 
 header .logo h3 {
   margin: 0;
-  padding: 0;
   color: white;
 }
 
+
+
+/* フッタースタイル */
 .footer {
-  background-color: black;
+  text-align: center;
+  background: var(--primary-color);
   color: white;
-  padding: 10px;
+  padding: 10px 0;
+  position: fixed;
   width: 100%;
   bottom: 0;
-  position: fixed;
-  margin-top: auto;
-
 }
 
-
- 
-
-nav ul {
-  margin: 0;
-  padding: 0;
+/* コンテンツのスタイル */
+.site-layout-content {
+  padding: 24px;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  min-height: 380px;
 }
 
-nav ul li {
-  list-style: none;
-  display: inline-block;
-  margin-right: 30px;
-}
-
-nav ul li a {
-  font-size: 19px;
-  text-decoration: none;
-  color: var(--white-color);
-  transition: all 0.2s;
-}
-
-nav ul li a:hover {
-  color: green;
-}
-
-.container {
-  height: 100vh;
-  padding: 120px;
-}
-
-.container h1 {
+/* ボックススタイル */
+.box {
+  background: var(--lightgray-color);
+  padding: 20px;
   text-align: center;
-  font-size: 50px;
+  border-radius: 4px;
 }
 
-.profileImage {
-  object-fit: cover;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-img {
-  width: 320px;
-  height: 500px;
-}
-
-.service {
-  margin-top: 80px;
-  margin-bottom: 60px;
-}
-
-.footermae {
-  padding-bottom: 100px;
-}
-
-#skill img {
-  object-fit: cover;
-  margin-bottom: 12px;
-  margin-top: 12px;
-  height: 300px;
-}
-
-#skill button {
-  margin-bottom: 90px;
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .box {
+    margin-bottom: 16px;
+  }
 }
